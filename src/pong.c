@@ -101,7 +101,7 @@ int main(int argc, char *argv[])
 	SIDE sideOut = SIDE_NONE;
 	
 	while(run) {
-		if(SDL_PollEvent(&e)) {
+		while(SDL_PollEvent(&e)) {
 			if(e.type == SDL_QUIT) {
 				run = false;
 			} else if(e.type == SDL_KEYDOWN) {
